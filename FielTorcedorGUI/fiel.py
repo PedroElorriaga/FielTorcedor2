@@ -1,14 +1,15 @@
 #importações de bibliotecas
 from asyncio.windows_events import NULL
 from cgitb import text
-import imp
 from turtle import title
 import pyautogui
 from time import sleep
 
 """while True:
-    sleep(2)
+    sleep(4)
+    print()
     print(pyautogui.position())"""
+
 
 #Pegar informações de login do usuário
 userInfo = True
@@ -17,11 +18,11 @@ while userInfo:
     getUserPass = pyautogui.password(text='Digite sua senha', title='LOGIN')
 
     if len(getUserId) == 0:
-        pyautogui.alert(text='Digite seu usuário!', title='ALERT')
+        pyautogui.alert(text='Digite seu usuário!', title='USER')
         continue
 
     elif len(getUserPass) == 0:
-        pyautogui.alert(text='Digite sua senha!', title='ALERT')
+        pyautogui.alert(text='Digite sua senha!', title='PASSWORD')
         continue
 
     else:
@@ -30,7 +31,7 @@ while userInfo:
 pyautogui.alert(text='Verifique se o  CAPS LOCK está desativado, depois clique em confirmar', button='Confirmar')
 #Buscar o chrome pela aba de pesquisas
 pyautogui.press('win')
-pyautogui.PAUSE= 0.8
+pyautogui.PAUSE= 1
 pyautogui.write('chrome')
 pyautogui.PAUSE = 1
 #Abrir o chrome
@@ -55,4 +56,18 @@ pyautogui.write(getUserPass)
 pyautogui.click(x=793, y=665)
 sleep(2.5)
 pyautogui.click(x=1421, y=619)
-#
+#Aba comprar ingresso
+sleep(0.7)
+pyautogui.click(x=280, y=735)
+sleep(0.8)
+pyautogui.scroll(-150)
+pyautogui.click(x=322, y=881)
+pyautogui.click(x=1614, y=885)
+sleep(1)
+pyautogui.click(x=479, y=434)
+pyautogui.click(x=257, y=727)
+sleep(0.8)
+pyautogui.click(x=1651, y=893)
+#Reserva
+sleep(0.8)
+pyautogui.scroll(-500)
