@@ -1,1 +1,1 @@
-Em desenvolvimento
+Desenvolvido com Pyautogui - 2022
